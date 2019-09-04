@@ -1,0 +1,120 @@
+.outer-wrapper {
+  // height: calc(100vh - 75px);
+  .scroll {
+    .right-wrapper {
+      // width: 80vw;
+      margin: 1rem auto;
+      height: auto;
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 1rem auto;
+        width: 90%;
+        text-align: center;
+        font-family: arial;
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          height: 40%;
+          width: 100%;
+          border-bottom: 1px solid $blue-color;
+          margin-bottom: 0.75rem;
+        }
+
+        .price {
+          color: grey;
+          font-size: 22px;
+          margin: 0.75rem;
+        }
+
+        i {
+          cursor: pointer;
+          margin-top: 1.5rem;
+          font-size: 1.5rem;
+
+          &.red {
+            color: red;
+          }
+        }
+
+        .btn {
+          border: none;
+          outline: 0;
+          padding: 12px;
+          background-color: $yellow-color;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          .product-link {
+            color: black;
+            text-decoration: none;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .left-wrapper {
+    width: 80vw;
+    margin: 1rem auto;
+  }
+}
+
+@media (min-width: 700px) {
+  .outer-wrapper {
+    display: flex;
+
+    .scroll {
+      width: 100vw;
+      .right-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem;
+        flex: 0 1 calc(80vw - 1rem);
+
+        .card {
+          flex: 0 1 calc(30% - 1rem);
+          height: 490px;
+
+          i {
+            margin: 1rem;
+          }
+
+          .btn {
+            position: absolute;
+            bottom: 0;
+          }
+        }
+      }
+    }
+
+    .left-wrapper {
+      flex: 0 1 calc(20vw - 1rem);
+      padding: 1rem;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .outer-wrapper {
+    .right-wrapper {
+      .card {
+        flex: 0 1 calc(30% - 1rem);
+
+        .btn {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

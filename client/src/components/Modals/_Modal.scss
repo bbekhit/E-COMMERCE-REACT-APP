@@ -1,0 +1,109 @@
+.login-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+
+  .close {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .modal-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate((-50%, -50%));
+    width: 85vw;
+    border: 1px solid $blue-color;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  input {
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    outline: none;
+    padding: 0.75rem 1rem;
+    border: 1px solid $blue-color;
+    font-size: 1rem;
+
+    &:placeholder {
+      color: black;
+    }
+
+    &.error {
+      border: 1px solid red;
+      font-size: 1rem;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    color: $blue-color;
+  }
+
+  .buttons-wrapper {
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin: 10px 0;
+      outline: none;
+      font-size: 1rem;
+      border: 2px solid $blue-color;
+      border-radius: 22px;
+      padding: 0.75rem 2.5rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $blue-color;
+      background: white;
+      transition: all 0.2s linear;
+
+      &:disabled {
+        opacity: 0.5;
+
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+
+      &.back-button {
+        margin-right: 0.75rem;
+      }
+
+      &:hover {
+        color: white;
+        background: $blue-color;
+        border-color: $orange-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.hide {
+  overflow: hidden;
+}
+
+@media (min-width: 690px) {
+  .login-wrapper {
+    .modal-body {
+      width: 500px;
+    }
+  }
+}

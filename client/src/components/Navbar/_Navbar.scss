@@ -1,0 +1,109 @@
+.navbarWrapper {
+  background: $blue-color;
+  display: flex;
+  height: 75px;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .logo {
+    color: $dark-color;
+    font-size: 35px;
+  }
+  .menuBtn {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    list-style-type: none;
+
+    .auth-buttons {
+      display: flex;
+    }
+
+    .user-name {
+      color: $orange-color;
+    }
+  }
+  li {
+    font-size: 20px;
+    padding: 12px 15px;
+    &:last-child {
+      padding-right: 0;
+    }
+    .link {
+      text-decoration: none;
+      color: $dark-color;
+
+      .cart-icon {
+        position: relative;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 30px;
+        margin-right: 1rem;
+      }
+      span {
+        padding: 4px;
+        background: white;
+        position: absolute;
+        border-radius: 50%;
+        display: inline-block;
+        font-size: 25px;
+        top: -15px;
+        left: 28px;
+        transition: all 2s ease;
+        color: red;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbarWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 70px;
+
+    .logo {
+      padding-top: 15px;
+    }
+    .menuBtn {
+      display: block;
+      position: absolute;
+      top: 17px;
+      right: 20px;
+      cursor: pointer;
+      .bar1,
+      .bar2,
+      .bar3 {
+        height: 5px;
+        width: 35px;
+        margin: 5px 0;
+        background: $dark-color;
+      }
+    }
+    .main-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      max-height: 0;
+      transition: 2.5s ease-in-out;
+      &.show {
+        overflow: hidden;
+        max-height: 500px; /* approximate max height */
+        transition: 2.5s ease-in-out;
+      }
+
+      .auth-buttons {
+        flex-direction: column;
+      }
+    }
+  }
+}

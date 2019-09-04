@@ -1,0 +1,23 @@
+.progressbar {
+  width: 80%;
+  height: 1.5rem;
+  border-bottom: 1px solid #e9e5e2;
+  margin: 2rem auto;
+  border-radius: 0.75rem;
+  // background: #e9e5e2;
+  background-image: -webkit-linear-gradient(to bottom, #e1ddd9, #e9e5e2);
+  background-image: -moz-linear-gradient(to bottom, #e1ddd9, #e9e5e2);
+  background-image: -ms-linear-gradient(to bottom, #e1ddd9, #e9e5e2);
+  background-image: -o-linear-gradient(to bottom, #e1ddd9, #e9e5e2);
+  background-image: linear-gradient(to bottom, #e1ddd9, #e9e5e2);
+  -moz-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+  -webkit-box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+  box-shadow: 0 1px 0px #bebbb9 inset, 0 1px 0 #fcfcfc;
+
+  .filler {
+    background: $blue-color;
+    height: 100%;
+    border-radius: inherit;
+    transition: width 3s ease-in;
+  }
+}
