@@ -118,8 +118,8 @@ class SingleProduct extends Component {
                 <h1>{product.brand}</h1>
                 <Rating
                   productId={product._id}
-                  dynamicValue={rating.dynamicValue}
-                  id={rating._id}
+                  dynamicValue={product.rating.dynamicValue}
+                  id={product.rating._id}
                 />
                 <h3>{product.model}</h3>
                 <p>${product.price}</p>
