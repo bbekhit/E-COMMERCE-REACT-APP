@@ -17,6 +17,7 @@ import Cart from "./components/Product/Cart";
 import Auth from "./utilis/auth";
 import Loader from "./components/Loader/Loader";
 import Rating from "./components/Rating/Rating";
+import Home from "./components/Home/Home";
 
 if (localStorage.jwtToken && localStorage.currentUser) {
   setAuthToken(localStorage.jwtToken);
@@ -37,6 +38,7 @@ const Main = withRouter(({ location }) => {
         {location.pathname !== "/login" && <Navbar />}
         <ModalManager />
         <Switch>
+          <Route exact path="/" component={Auth(Home, null)} />
           <Route exact path="/register" component={Auth(Register, false)} />
           <Route
             exact
