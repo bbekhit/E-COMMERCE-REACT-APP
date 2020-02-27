@@ -51,6 +51,7 @@ class ProductForm extends Component {
     e.preventDefault();
     const productData = this.state.product;
     this.props.addProduct(productData);
+    this.props.history.push('/products')
   };
 
   getModels = models => {

@@ -34,7 +34,11 @@ class Navbar extends Component {
           <div className="bar2" />
           <div className="bar3" />
         </div>
-        <div className="logo">Shopy</div>
+        <div>
+          <Link className="logo" to="/">
+            Shopy
+          </Link>
+        </div>
         <ul className="main-nav">
           <li>
             <Link className="link" to="/add-product">
@@ -42,8 +46,8 @@ class Navbar extends Component {
             </Link>
           </li>
           <li>
-            <Link className="link" to="/">
-              About
+            <Link className="link" to="/products">
+              Products
             </Link>
           </li>
           {isAuthenticated ? (
