@@ -40,7 +40,7 @@ class Navbar extends Component {
           </Link>
         </div>
         <ul className="main-nav">
-          <li>
+          <li style={{ paddingTop: "25px" }}>
             <Link className="link" to="/add-product">
               Add Product
             </Link>
@@ -52,10 +52,8 @@ class Navbar extends Component {
           </li>
           {isAuthenticated ? (
             <div style={{ display: "flex" }}>
-              <li>
-                <div onClick={this.logoutUser} style={{ cursor: "pointer" }}>
-                  Logout
-                </div>
+              <li onClick={this.logoutUser} style={{ cursor: "pointer" }}>
+                <Link className="link">Logout</Link>
               </li>
               <li>
                 <Link className="link" to="/cart">
