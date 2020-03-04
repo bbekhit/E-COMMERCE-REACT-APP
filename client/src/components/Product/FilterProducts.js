@@ -59,10 +59,15 @@ class FilterProducts extends Component {
 
   middle = e => {
     this.setState({ [e.target.name]: e.target.value }, () => {
-      this.props.setSearchFilter(this.state.searchText);
       this.props.setMinPriceFilter(this.state.minPrice);
       this.props.setMaxPriceFilter(this.state.maxPrice);
     });
+  };
+
+  handleTextChange = e => {
+    this.setState({ searchText: e.target.value }, () =>
+      this.props.setSearchFilter(this.state.searchText)
+    );
   };
 
   toggleFavourite = favourites => {
@@ -118,7 +123,7 @@ class FilterProducts extends Component {
             type="text"
             name="searchText"
             placeholder="Search Brands"
-            onChange={this.handleChange}
+            onChange={this.handleTextChange}
           />
         </div>
         {Object.keys(user).length ? (
