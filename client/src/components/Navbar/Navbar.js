@@ -40,7 +40,7 @@ class Navbar extends Component {
           </Link>
         </div>
         <ul className="main-nav">
-          <li style={{ paddingTop: "25px" }}>
+          <li className="first">
             <Link className="link" to="/add-product">
               Add Product
             </Link>
