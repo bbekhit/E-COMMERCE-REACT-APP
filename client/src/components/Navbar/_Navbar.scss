@@ -33,6 +33,10 @@
   li {
     font-size: 20px;
     padding: 12px 15px;
+
+    &:first-child {
+      padding-top: 16px;
+    }
     &:last-child {
       padding-right: 0;
     }
@@ -73,6 +77,8 @@
 
     .logo {
       padding-top: 15px;
+      position: relative;
+      top: 12px;
     }
     .menuBtn {
       display: block;
@@ -95,11 +101,11 @@
       justify-content: space-between;
       overflow: hidden;
       max-height: 0;
-      transition: 2.5s ease-in-out;
+      transition: 1s ease-in-out;
       &.show {
         overflow: hidden;
         max-height: 500px; /* approximate max height */
-        transition: 2.5s ease-in-out;
+        transition: 1s ease-in-out;
       }
 
       .auth-buttons {
