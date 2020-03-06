@@ -13,6 +13,7 @@ import { connect } from "react-redux";
 import noimage from "../../assets/images/noimage.png";
 import moment from "moment";
 import Rating from "../Rating/Rating";
+import noImage from "../../assets/images/noimage.png";
 
 class SingleProduct extends Component {
   state = {
@@ -96,8 +97,16 @@ class SingleProduct extends Component {
                 }
                 alt="product"
               />
-              <img src={product.images[1]} className="imgTwo" alt="product" />
-              <img src={product.images[2]} className="imgThree" alt="product" />
+              <img
+                src={product.images[1] ? product.images[1] : noImage}
+                className="imgTwo"
+                alt="product"
+              />
+              <img
+                src={product.images[2] ? product.images[2] : noImage}
+                className="imgThree"
+                alt="product"
+              />
             </div>
           ) : (
             <div className="images-wrapper">
